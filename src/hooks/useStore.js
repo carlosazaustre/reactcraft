@@ -1,4 +1,4 @@
-import zustand from "zustand";
+import { create } from "zustand";
 import { nanoid } from "nanoid";
 
 export const useStore = create((set) => ({
@@ -6,8 +6,23 @@ export const useStore = create((set) => ({
 	cubes: [
 		{
 			key: nanoid(),
-			pos: [1, 1, 1],
+			pos: [2, 0, 0],
 			texture: "dirt",
+		},
+		{
+			key: nanoid(),
+			pos: [1, 0, 0],
+			texture: "glass",
+		},
+		{
+			key: nanoid(),
+			pos: [3, 0, 0],
+			texture: "wood",
+		},
+		{
+			key: nanoid(),
+			pos: [4, 0, 0],
+			texture: "log",
 		},
 	],
 	addCube: (x, y, z) => {
