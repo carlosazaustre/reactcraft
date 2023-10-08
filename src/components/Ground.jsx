@@ -18,7 +18,7 @@ export const Ground = () => {
 	};
 
 	return (
-		<mesh onClick={handleClick} ref={ref}>
+		<mesh onClick={handleClick} onTouchStart={handleClick} ref={ref}>
 			<planeGeometry attach="geometry" args={[100, 100]} />
 			<meshStandardMaterial attach="material" map={groundTexture} />
 		</mesh>
