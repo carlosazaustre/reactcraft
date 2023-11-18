@@ -1,4 +1,5 @@
 import { Canvas } from "@react-three/fiber";
+import { VRButton, ARButton, XR, Controllers, Hands } from "@react-three/xr";
 import { Sky } from "@react-three/drei";
 import { Physics } from "@react-three/cannon";
 import { Ground } from "./components/Ground";
@@ -11,15 +12,20 @@ import { Menu } from "./components/Menu";
 function App() {
 	return (
 		<>
+			<VRButton />
 			<Canvas>
-				<Sky sunPosition={[100, 100, 20]} />
-				<ambientLight intensity={1.1} />
-				<FPV />
-				<Physics>
-					<Player />
-					<Cubes />
-					<Ground />
-				</Physics>
+				<XR>
+					<Sky sunPosition={[100, 100, 20]} />
+					<ambientLight intensity={1.1} />
+					<FPV />
+					<Controllers />
+					<Hands />
+					<Physics>
+						<Player />
+						<Cubes />
+						<Ground />
+					</Physics>
+				</XR>
 			</Canvas>
 			<div className="absolute centered cursor">+</div>
 			<TextureSelector />

@@ -26,6 +26,7 @@ export const Player = () => {
 	}, [api.velocity]);
 
 	const pos = useRef([0, 0, 0]);
+
 	useEffect(() => {
 		api.position.subscribe((p) => {
 			pos.current = p;
