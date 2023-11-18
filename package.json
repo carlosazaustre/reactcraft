@@ -13,6 +13,7 @@
     "@react-three/cannon": "^6.6.0",
     "@react-three/drei": "^9.86.3",
     "@react-three/fiber": "^8.14.3",
+    "@react-three/xr": "^5.7.1",
     "nanoid": "^5.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
